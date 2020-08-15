@@ -1,0 +1,27 @@
+#,Name,Type 1,Type 2,Total,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed,Generation,Legendary,SPATK Count
+1,Venusaur,Grass,Poison,525,80,82,83,100,100,80,1,FALSE,3
+2,Charizard,Fire,Flying,534,78,84,78,109,85,100,1,FALSE,3
+3,METAPOD!!!,Bug,,205,50,20,55,25,25,30,1,FALSE,6
+4,Blastoise,Water,,530,79,83,100,85,105,78,1,FALSE,3
+5,Raichu,Electric,,485,60,90,55,90,80,110,1,FALSE,4
+6,Nidoqueen,Poison,Ground,505,90,92,87,75,85,76,1,FALSE,3
+7,Nidoking,Poison,Ground,505,81,102,77,85,75,85,1,FALSE,3
+8,Poliwrath,Water,Fighting,510,90,95,95,70,90,70,1,FALSE,4
+9,Alakazam,Psychic,,500,55,50,45,135,95,120,1,FALSE,3
+10,Machamp,Fighting,,505,90,130,80,65,85,55,1,FALSE,4
+11,Golem,Rock,Ground,495,80,120,130,55,65,45,1,FALSE,4
+12,Gengar,Ghost,Poison,500,60,65,60,130,75,110,1,FALSE,3
+13,Onix,Rock,Ground,385,35,45,160,30,45,70,1,FALSE,4
+14,Hitmonlee,Fighting,,455,50,120,53,35,110,87,1,FALSE,5
+15,Hitmonchan,Fighting,,455,50,105,79,35,110,76,1,FALSE,5
+16,Kangaskhan,Normal,,490,105,95,80,40,80,90,1,FALSE,3
+17,Scyther,Bug,Flying,500,70,110,80,55,80,105,1,FALSE,4
+18,Pinsir,Bug,,500,65,125,100,55,70,85,1,FALSE,4
+19,Gyarados,Water,Flying,540,95,125,79,60,100,81,1,FALSE,3
+20,Lapras,Water,Ice,535,130,85,80,85,95,60,1,FALSE,3
+21,Vaporeon,Water,,525,130,65,60,110,95,65,1,FALSE,4
+22,Jolteon,Electric,,525,65,65,60,110,95,130,1,FALSE,4
+23,Flareon,Fire,,525,65,130,60,95,110,65,1,FALSE,4
+24,Porygon,Normal,,395,65,60,70,85,75,40,1,FALSE,5
+25,Aerodactyl,Rock,Flying,515,80,105,65,60,75,130,1,FALSE,4
+26,Dragonite,Dragon,Flying,600,91,134,95,100,100,80,1,FALSE,2
