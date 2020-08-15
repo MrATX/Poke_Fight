@@ -5,7 +5,42 @@ import pandas as pd
 import random
 import sys
 import functions as fn
-poke_file = "Pokemon/Pokemon_roster.csv"
+
+#Variables
+atk_coef = 0.35
+def_coef = 0.005
+eva_coef = 0.35
+pl_action = "hold"
+pl_sel_choices = ["A","a","S","s","P","p","R","r"]
+pl_sel_sp = ["S","s"]
+ai_action = "A"
+ai_sel_choices = ["A","S","P"]
+
+#Intro
+#------------------------------------------------------------
+#Mode Selection & Roster Count Selection & Pokemon Pool Selection & File Import and Clean
+intro = "hold"
+game_modes = ["1","2"]
+while intro not in game_modes:
+    intro = input("\nWelcome to Poke Fight!\nPlease select a game mode\n"
+    "[1] One Player\n[2] Two Player   ")
+count_choice = "hold"
+count_range = [str(i) for i in range(2,7)]
+while count_choice not in count_range:
+    count_choice = input("\nHow many Pokemon would you like to battle with? (2-6)   ")
+poke_pools = [str(i) for i in range(1,5)]
+pool_choice = "hold"
+while pool_choice not in poke_pools:
+    pool_choice = input("\nWhich Pokemon roster would you like to play with?"
+    "\n[1] Red & Blue\n[2] Silver & Gold\n[3] All Generations\n[4] Legendary Only    ")
+if pool_choice == "1":
+    poke_file = "Pokemon/pokemon_gen1.csv"
+if pool_choice == "2":
+    poke_file = "Pokemon/pokemon_gen2.csv"
+if pool_choice == "3":
+    poke_file = "Pokemon/pokemon_med_str.csv"
+if pool_choice == "4":
+    poke_file = "Pokemon/pokemon_legendary.csv"
 poke = pd.read_csv(poke_file)
 del poke["Legendary"]
 del poke["Generation"]
@@ -20,28 +55,7 @@ poke.rename(columns={
     "SPATK Count":"SP ATK Charges"
 },inplace=True)
 
-#Variables
-atk_coef = 0.35
-def_coef = 0.005
-eva_coef = 0.35
-pl_action = "hold"
-pl_sel_choices = ["A","a","S","s","P","p","R","r"]
-pl_sel_sp = ["S","s"]
-ai_action = "A"
-ai_sel_choices = ["A","S","P"]
 
-#Intro
-#------------------------------------------------------------
-#Mode Selection & Roster Count Selection
-intro = "hold"
-game_modes = ["1","2"]
-while intro not in game_modes:
-    intro = input("\nWelcome to Poke Fight!\nPlease select a game mode\n"
-    "[1] One Player\n[2] Two Player   ")
-count_choice = "hold"
-count_range = [str(i) for i in range(2,7)]
-while count_choice not in count_range:
-    count_choice = input("\nHow many Pokemon would you like to battle with? (2-6)   ")
     
 #Name Selection & Roster Selection
 p1name = input("\nPlayer 1, please enter your name:   ")
@@ -69,7 +83,7 @@ print(p2roster.iloc[1,4])
 #1st Pokemon_Selection
 #One Player
 if intro == "1":
-    print(f"\nAI Opponent's Pokemon: {p2roster.to_string(index=False)}")
+    print(f"\nAI Opponent's Pokemon\n{p2roster.to_string(index=False)}")
     fn.player_poke_sel(1,players,p1roster)
     p1active = fn.plactive
     p1idx = fn.plidx

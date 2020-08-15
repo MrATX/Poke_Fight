@@ -1,0 +1,26 @@
+﻿#,Name,Type 1,Type 2,Total,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed,Generation,Legendary,SPATK Count
+1,Meganium,Grass,,525,80,82,100,83,100,80,2,FALSE,3
+2,Typhlosion,Fire,,534,78,84,78,109,85,100,2,FALSE,2
+3,Feraligatr,Water,,530,85,105,100,79,83,78,2,FALSE,3
+4,Furret,Normal,,415,85,76,64,45,55,90,2,FALSE,5
+5,Crobat,Poison,Flying,535,85,90,80,70,80,130,2,FALSE,4
+6,Lanturn,Water,Electric,460,125,58,58,76,76,67,2,FALSE,4
+7,Xatu,Psychic,Flying,470,65,75,70,95,70,95,2,FALSE,4
+8,Ampharos,Electric,,510,90,75,85,115,90,55,2,FALSE,2
+9,Politoed,Water,,500,90,75,75,90,100,70,2,FALSE,3
+10,Quagsire,Water,Ground,430,95,85,85,65,65,35,2,FALSE,3
+11,Espeon,Psychic,,525,65,65,60,130,95,110,2,FALSE,4
+12,Umbreon,Dark,,525,95,65,110,60,130,65,2,FALSE,4
+13,Forretress,Bug,Steel,465,75,90,140,60,60,40,2,FALSE,3
+14,Steelix,Steel,Ground,510,75,85,200,55,65,30,2,FALSE,4
+15,Scizor,Bug,Steel,500,70,130,100,55,80,65,2,FALSE,4
+16,Heracross,Bug,Fighting,500,80,125,75,40,95,85,2,FALSE,3
+17,Ursaring,Normal,,500,90,130,75,75,75,55,2,FALSE,3
+18,Piloswine,Ice,Ground,450,100,100,80,60,60,50,2,FALSE,3
+19,Octillery,Water,,480,75,105,75,105,75,45,2,FALSE,3
+20,Houndoom,Dark,Fire,500,75,90,50,110,80,95,2,FALSE,3
+21,Kingdra,Water,Dragon,540,75,95,95,95,95,85,2,FALSE,2
+22,Donphan,Ground,,500,90,120,120,60,60,50,2,FALSE,3
+23,Porygon2,Normal,,515,85,80,90,105,95,60,2,FALSE,3
+24,Hitmontop,Fighting,,455,50,95,95,35,110,70,2,FALSE,4
+25,Miltank,Normal,,490,95,80,105,40,70,100,2,FALSE,3
