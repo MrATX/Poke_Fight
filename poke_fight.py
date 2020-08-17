@@ -15,6 +15,12 @@ pl_sel_choices = ["A","a","S","s","P","p","R","r"]
 pl_sel_sp = ["S","s"]
 ai_action = "A"
 ai_sel_choices = ["A","S","P"]
+type_matchups = pd.DataFrame({
+    "0.0":["Ineffective"],
+    "0.5":["Mildly Effective"],
+    "1.0":["Effective"],
+    "2.0":["Very Effective"]
+})
 
 #Intro
 #------------------------------------------------------------
@@ -54,7 +60,9 @@ poke.rename(columns={
     "Speed":"SPEED",
     "SPATK Count":"SP ATK Charges"
 },inplace=True)
-
+poke_file = "Pokemon/type_matchups.csv"
+type_poke = pd.read_csv(poke_file)
+type_poke = type_poke.set_index("TYPE")
 
     
 #Name Selection & Roster Selection
@@ -151,7 +159,7 @@ while p1_ros_hp == "Fine" and p2_ros_hp == "Fine":
             plactive = fn.plactive
             plidx = fn.plidx
         else:
-            fn.attack(i,pl_action,plactive,opactive,atk_coef,def_coef,eva_coef)
+            fn.attack(i,pl_action,plactive,opactive,atk_coef,def_coef,eva_coef,type_poke,type_matchups)
             oproster.iloc[opidx,3] = fn.defender_hp
             opactive = oproster.iloc[opidx,:]
         if opactive.iloc[3] == 0:  

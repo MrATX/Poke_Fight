@@ -91,7 +91,7 @@ def player_poke_sel(plnum,players,roster):
                     global p2active
                     p2active = plactive
 
-def attack(plnum,action,attacker,defender,atk_coef,def_coef,eva_coef):
+def attack(plnum,action,attacker,defender,atk_coef,def_coef,eva_coef,type_poke,type_matchups):
     import random
     global defender_hp
     if plnum == 1:
@@ -103,7 +103,9 @@ def attack(plnum,action,attacker,defender,atk_coef,def_coef,eva_coef):
     if action == "A" or action == "a":
         atk_dmg = int((atk_coef*attacker.loc["ATK"]*(1 - (def_coef*defender.loc["DEF"]))))
     if action == "S" or action == "s":
-        atk_dmg = int((atk_coef*attacker.loc["SP ATK"]*(1-(def_coef*defender.loc["SP DEF"]))))
+        type_coef = type_poke.loc[attacker[1],defender[1]]
+        effect = type_matchups.loc[0,str(type_coef)]
+        atk_dmg = int((atk_coef*attacker.loc["SP ATK"]*(1-(def_coef*defender.loc["SP DEF"])))*type_coef*1.15)
     #Attack
     if action == "S" or action == "s":
         eva_coef = 0
@@ -115,6 +117,8 @@ def attack(plnum,action,attacker,defender,atk_coef,def_coef,eva_coef):
             print(f"{attacker[0]} {attack_texts[action]} for {atk_dmg} DMG and KO'd {defender[0]}!")
         if defender_hp > 0:
             print(f'{attacker[0]} {attack_texts[action]} for {atk_dmg} DMG!')
+            if action == "S" or action == "s":
+                print(f"It was {effect}!")
     else:
         defender_hp = defender.loc["HP"]
         print(f'{attacker[0]} MISSED!')
