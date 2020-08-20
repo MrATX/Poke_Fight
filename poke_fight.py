@@ -97,7 +97,7 @@ if intro == "1":
     p1idx = fn.plidx
     fn.ai_poke_sel(p2roster)
     p2active = fn.plactive
-    p2idx = fn.aiidx
+    p2idx = fn.plidx
 #Two Player
 if intro == "2":
     fn.player_poke_sel(1,players,p1roster)

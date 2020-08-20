@@ -53,13 +53,13 @@ def player_roster_sel(plnum,players,count_choice,poke):
 
 def ai_poke_sel(roster):
     import random
-    global aiidx
+    global plidx
     wip = "hold"
     while wip == "hold":
-        aiidx = random.randint(0,len(p2roster)-1)
-        if p2roster.iloc[aiidx,4] > 0:
+        plidx = random.randint(0,len(p2roster)-1)
+        if p2roster.iloc[plidx,4] > 0:
             global p2active
-            p2active = p2roster.iloc[aiidx]
+            p2active = p2roster.iloc[plidx]
             wip = "pass"
             print(f"\nAI Opponent sends out {p2active[0]} - {p2active[4]} HP\n")
 
