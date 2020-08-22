@@ -57,11 +57,11 @@ def ai_poke_sel(roster):
     wip = "hold"
     while wip == "hold":
         plidx = random.randint(0,len(p2roster)-1)
-        if p2roster.iloc[plidx,4] > 0:
+        if p2roster.iloc[plidx,3] > 0:
             global p2active
             p2active = p2roster.iloc[plidx]
             wip = "pass"
-            print(f"\nAI Opponent sends out {p2active[0]} - {p2active[4]} HP\n")
+            print(f"\nAI Opponent sends out {p2active[0]} - {p2active[3]} HP\n")
 
 def player_poke_sel(plnum,players,roster):
     print(f"\n{players[plnum-1][1]}'s Pokemon")

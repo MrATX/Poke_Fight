@@ -86,8 +86,6 @@ if intro == "2":
     fn.player_roster_sel(2,players,count_choice,poke)
     p2roster = fn.p2roster
 
-print(p2roster.iloc[1,4])
-
 #1st Pokemon_Selection
 #One Player
 if intro == "1":
@@ -172,7 +170,7 @@ while p1_ros_hp == "Fine" and p2_ros_hp == "Fine":
                 fn.endgame(players,p1roster,p2roster,p1_ros_hp,p2_ros_hp)
                 sys.exit()
             if players[1][1] == "AI Opponent" and i == 1:
-                fn.ai_poke_sel(p2roster)
+                fn.ai_poke_sel(oproster)
             else:
                 fn.player_poke_sel(j,players,oproster)
             opactive = fn.plactive
